@@ -27,7 +27,7 @@ npm start
 
 ## TODO
 
- - [] Basic JSON deck specification.
+ - [x] Basic JSON deck specification.
  - [] JSON file format specification for the decks, types of cards, configuration, and quantity.
  - [] The backend creates a deck from a JSON file specifying the deck.
  - [] A player can draw a card from a deck tracked on the backend.
@@ -41,5 +41,30 @@ npm start
  - [] The phase advances automatically after a fixed time
  - [] The game has a different mode between phases...
  - [] More to come...
+
+## `Deck` specification
+
+Describes a deck of cards.
+
+| field    | type      | description                                                                                 |
+|----------|-----------|---------------------------------------------------------------------------------------------|
+| cards | `Array<CardDefinition>` | An array of `CardDefinition` objects. |
+
+
+## `CardDefinition` specification
+Describes one class of card.
+
+| field    | type      | description                                                                                 |
+|----------|-----------|---------------------------------------------------------------------------------------------|
+| type     | `String`  | A string describing a type of card. All cards of this type should have the same attributes. |
+| quantity | `Integer` | How many copies of this card to insert into the deck.                                       |
+
+## "Resources" card type
+Resources are the principle currency of the game. Each resources card can have a number of resources on it. There is no restriction on repeated resources or number that can be present on a card (at this time).
+
+| field | type | description |
+|---|---|---|
+| title | `String` | The name of the resource card |
+| resources | `Array<Resource>` | An array of Resource tokens |
 
 #### License [Apache 2.0](LICENSE.txt)

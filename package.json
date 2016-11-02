@@ -1,22 +1,24 @@
 {
-  "name": "electron-quick-start",
-  "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "name": "party-trade",
+  "version": "0.0.1",
+  "description": "An Electron implementation of my Trading game",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "test": "mocha lib/**/*Test.js"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/carlthuringer/game-off-2016",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "gamedev",
+    "electron",
+    "elm"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "Carl Thuringer",
+  "license": "Apache-2.0",
   "devDependencies": {
-    "electron": "^1.4.1"
-  }
+    "chai": "^3.5.0",
+    "electron": "^1.4.1",
+    "mocha": "^3.1.2"
+  },
+  "dependencies": {}
 }

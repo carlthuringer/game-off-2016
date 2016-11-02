@@ -28,7 +28,8 @@ npm start
 ## TODO
 
  - [x] Basic JSON deck specification.
- - [ ] Set up Mocha test framework and TDD some card file reading.
+ - [x] Set up Mocha test framework and TDD some card file reading.
+ - [ ] Inject some card data, instantiate some cards.
  - [ ] JSON file format specification for the decks, types of cards, configuration, and quantity.
  - [ ] The backend creates a deck from a JSON file specifying the deck.
  - [ ] A player can draw a card from a deck tracked on the backend.

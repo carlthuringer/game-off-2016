@@ -22,7 +22,9 @@ cd game-off-2016
 # Install dependencies
 yarn
 # Run the app
-npm start
+yarn start
+# Run tests
+yarn test
 ```
 
 ## TODO

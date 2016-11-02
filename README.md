@@ -28,20 +28,20 @@ npm start
 ## TODO
 
  - [x] Basic JSON deck specification.
- - [] Set up Mocha test framework and TDD some card file reading.
- - [] JSON file format specification for the decks, types of cards, configuration, and quantity.
- - [] The backend creates a deck from a JSON file specifying the deck.
- - [] A player can draw a card from a deck tracked on the backend.
- - [] A player can start a new game, resulting in a new set of decks.
- - [] Another player can be in the game.
- - [] The player can initiate a trade session with the other player.
- - [] Cards can be added to the offer by either player
- - [] Players can indicate they accept the offer
- - [] The offer is completed and players hands are updated correctly with the new cards.
- - [] The game has multiple phases.
- - [] The phase advances automatically after a fixed time
- - [] The game has a different mode between phases...
- - [] More to come...
+ - [ ] Set up Mocha test framework and TDD some card file reading.
+ - [ ] JSON file format specification for the decks, types of cards, configuration, and quantity.
+ - [ ] The backend creates a deck from a JSON file specifying the deck.
+ - [ ] A player can draw a card from a deck tracked on the backend.
+ - [ ] A player can start a new game, resulting in a new set of decks.
+ - [ ] Another player can be in the game.
+ - [ ] The player can initiate a trade session with the other player.
+ - [ ] Cards can be added to the offer by either player
+ - [ ] Players can indicate they accept the offer
+ - [ ] The offer is completed and players hands are updated correctly with the new cards.
+ - [ ] The game has multiple phases.
+ - [ ] The phase advances automatically after a fixed time
+ - [ ] The game has a different mode between phases...
+ - [ ] More to come...
 
 ## `Deck` specification
 

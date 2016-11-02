@@ -1,40 +1,45 @@
-# electron-quick-start
+# Party Trading Card Game (Working Title)
 
-**Clone and run for a quick way to see an Electron in action.**
+This is a digital implementation of a game I hope to produce. I want to use the digital version to prototype and playtest.
 
-This is a minimal Electron application based on the [Quick Start Guide](http://electron.atom.io/docs/latest/tutorial/quick-start) within the Electron documentation.
+The primary technologies used will be [Node.js](https://nodejs.org/en/download/), [Electron](http://electron.atom.io) and [Elm](http://elm-lang.org).
 
-**Use this app along with the [Electron API Demos](http://electron.atom.io/#get-started) app for API code examples to help you get started.**
-
-A basic Electron application needs just these files:
-
-- `package.json` - Points to the app's main file and lists its details and dependencies.
-- `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
-- `index.html` - A web page to render. This is the app's **renderer process**.
-
-You can learn more about each of these components within the [Quick Start Guide](http://electron.atom.io/docs/latest/tutorial/quick-start).
+This is for the November Github Game Jam! I want to try to get a MVP put together before the end of the month, but I won't draw the line there.
 
 ## To Use
 
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+DEVELOPERS ONLY. There's nothing here for you to see yet, no game, and if you're not a developer just installing all these things might give you a headache!
+
+To clone and run this repository you'll need [Git](https://git-scm.com) and  (which comes with [npm](http://npmjs.com)) installed on your computer, and the [Elm](https://guide.elm-lang.org/get_started.html) runtime. I'm also using the [Yarn Package Manager](https://yarnpkg.com) because why not.
+
+From your command line:
 
 ```bash
 # Clone this repository
-git clone https://github.com/electron/electron-quick-start
+git clone https://github.com/carlthuringer/game-off-2016.git
 # Go into the repository
-cd electron-quick-start
+cd game-off-2016
 # Install dependencies
-npm install
+yarn
 # Run the app
 npm start
 ```
 
-Learn more about Electron and its API in the [documentation](http://electron.atom.io/docs/latest).
+## TODO
 
-## Other Example Apps
+ - [] Basic JSON deck specification.
+ - [] JSON file format specification for the decks, types of cards, configuration, and quantity.
+ - [] The backend creates a deck from a JSON file specifying the deck.
+ - [] A player can draw a card from a deck tracked on the backend.
+ - [] A player can start a new game, resulting in a new set of decks.
+ - [] Another player can be in the game.
+ - [] The player can initiate a trade session with the other player.
+ - [] Cards can be added to the offer by either player
+ - [] Players can indicate they accept the offer
+ - [] The offer is completed and players hands are updated correctly with the new cards.
+ - [] The game has multiple phases.
+ - [] The phase advances automatically after a fixed time
+ - [] The game has a different mode between phases...
+ - [] More to come...
 
-For more example apps, see the
-[list of boilerplates](http://electron.atom.io/community/#boilerplates)
-created by the awesome electron community.
-
-#### License [CC0 1.0 (Public Domain)](LICENSE.md)
+#### License [Apache 2.0](LICENSE.md)

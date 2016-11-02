@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "test": "mocha lib/**/*Test.js"
+    "test": "mocha -w lib/**/*Test.js"
   },
   "repository": "https://github.com/carlthuringer/game-off-2016",
   "keywords": [

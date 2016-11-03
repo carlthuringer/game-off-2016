@@ -31,8 +31,11 @@ yarn test
 
  - [x] Basic JSON deck specification.
  - [x] Set up Mocha test framework and TDD some card file reading.
- - [ ] Inject some card data, instantiate some cards.
+ - [x] Inject some card data, instantiate some cards.
+ - [ ] Switch to TypeScript for the backend
  - [ ] JSON file format specification for the decks, types of cards, configuration, and quantity.
+ - [ ] Deck Data supports copies of defined cards.
+ - [ ] Deck Data supports permutations of cards.
  - [ ] The backend creates a deck from a JSON file specifying the deck.
  - [ ] A player can draw a card from a deck tracked on the backend.
  - [ ] A player can start a new game, resulting in a new set of decks.
@@ -61,7 +64,8 @@ Describes one class of card.
 | field    | type      | description                                                                                 |
 |----------|-----------|---------------------------------------------------------------------------------------------|
 | type     | `String`  | A string describing a type of card. All cards of this type should have the same attributes. |
-| quantity | `Integer` | How many copies of this card to insert into the deck.                                       |
+| quantity | `Optional Integer` | How many copies of this card to insert into the deck.                                       |
+| permutations | `Optional Array<Array<String>>` | An Array of Arrays which will be combined to produce all permutations of the arrays. |
 
 ## "Resources" card type
 Resources are the principle currency of the game. Each resources card can have a number of resources on it. There is no restriction on repeated resources or number that can be present on a card (at this time).
@@ -70,5 +74,16 @@ Resources are the principle currency of the game. Each resources card can have a
 |---|---|---|
 | title | `String` | The name of the resource card |
 | resources | `Array<Resource>` | An array of Resource tokens |
+
+## Decisions
+
+### Card and Deck System
+At first I was working on a very flexible model of defining cards, to the point where you would be able to define an entire poker deck with a single card definition. While defining a card as a permutation is advantageous for poker, it doesn't help much with the kind of game I'm planning on making, where there will definitely be copies of cards and a great variety of carefully specified cards, rather than a perfect set of unique combinations.
+
+It's actually a bit more important for cards to have distinct Types which inform the application on how they interact with one another, and which cards are valid for which operations. For example, resource cards have three `resource` slots, and they have a `resources` function which returns an array of all available resources concatenated. This can be used to quickly total up the resources in a player's hand and enable them to make purchases or score goals later. 
+
+### TypeScript
+
+This leads me to a decision to convert to TypeScript. I want the power to handle cards generically in some cases, such as shuffling, but in other cases they should be handled by type. While some of this can be accomplished by putting a type attribute on the card object in Javascript, I get more abilities with a strongly typed language like TypeScript.
 
 #### License [Apache 2.0](LICENSE.txt)

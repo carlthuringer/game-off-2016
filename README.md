@@ -84,6 +84,8 @@ It's actually a bit more important for cards to have distinct Types which inform
 
 ### TypeScript
 
-This leads me to a decision to convert to TypeScript. I want the power to handle cards generically in some cases, such as shuffling, but in other cases they should be handled by type. While some of this can be accomplished by putting a type attribute on the card object in Javascript, I get more abilities with a strongly typed language like TypeScript.
+This leads me to a decision to convert to TypeScript. I want the power to handle cards generically in some cases, such as shuffling, but in other cases they should be handled by type. While some of this can be accomplished by putting a type attribute on the card object in Javascript, I get more abilities with a strongly typed language like TypeScript. For example, when building cards I can structurally type them as quantityCardDefinition or singleCardDefinition and build them appropriately (by looping or just pushing a single card onto the card collection)
+
+Also, I've been having a lot of pretty tedious and annoying trouble with basic type errors, trial and error. Even with mocha constantly rebuilding, I have to console log and inspect to figure out that I'm returning a function and not an object because I returned a reference instead of calling the function. This kind of problem would be obvious and potentially impossible in TypeScript.
 
 #### License [Apache 2.0](LICENSE.txt)

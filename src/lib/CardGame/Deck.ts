@@ -1,4 +1,5 @@
-class Deck {
+export class Deck {
+  cards: any
   constructor (deckData) {
     this.cards = deckData.cards
   }
@@ -7,5 +8,3 @@ class Deck {
     return this.cards.pop()
   }
 }
-
-module.exports = Deck

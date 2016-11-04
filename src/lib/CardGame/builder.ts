@@ -1,4 +1,4 @@
-module.exports = function Builder (deckData) {
+export function Builder (deckData) {
   let cards = []
   for (let cardDef of deckData.cards) {
     if (cardDef.hasOwnProperty('quantity')) {
@@ -15,8 +15,7 @@ module.exports = function Builder (deckData) {
   }
 }
 
-function cloneCard (card, dropList) {
-  if (typeof dropList === 'undefined') dropList = []
+function cloneCard (card, dropList = []) {
   let newCard = Object.assign({}, card)
   for (let prop in dropList) {
     delete newCard[prop]

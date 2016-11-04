@@ -1,7 +1,6 @@
 /* eslint-env mocha */
-let expect = require('chai').expect
-let CardGame = require('./index')
-let build = CardGame.build
+import { expect } from 'chai'
+import { build } from './CardGame'
 
 describe('Deck', function () {
   specify('An empty deck with no cards', function () {

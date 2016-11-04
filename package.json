@@ -5,7 +5,9 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "test": "mocha -w lib/**/*Test.js"
+    "test": "mocha --opts mocha.opts && rm -rf test",
+    "test:auto": "mocha --opts mocha.opts --watch",
+    "build": "webpack --"
   },
   "repository": "https://github.com/carlthuringer/game-off-2016",
   "keywords": [
@@ -16,9 +18,15 @@
   "author": "Carl Thuringer",
   "license": "Apache-2.0",
   "devDependencies": {
+    "awesome-typescript-loader": "^2.2.4",
     "chai": "^3.5.0",
     "electron": "^1.4.1",
-    "mocha": "^3.1.2"
+    "mocha": "^3.1.2",
+    "ts-node": "^1.6.1",
+    "typescript": "^2.0.6",
+    "webpack": "^1.13.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "webpack": "2.1.0-beta.25"
+  }
 }

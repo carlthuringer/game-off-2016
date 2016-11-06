@@ -32,10 +32,12 @@ yarn test
  - [x] Basic JSON deck specification.
  - [x] Set up Mocha test framework and TDD some card file reading.
  - [x] Inject some card data, instantiate some cards.
- - [ ] Switch to TypeScript for the backend
+ - [x] Switch to TypeScript for the backend
+ - [x] Deck Data supports copies of defined cards.j
+ - [ ] Bootstrap Frontend (Elm, Webpack)
+ - [ ] Hello World with Backend-Frontend communication
+ - [ ] Backend-Frontend communication with WebSocket?!
  - [ ] JSON file format specification for the decks, types of cards, configuration, and quantity.
- - [ ] Deck Data supports copies of defined cards.
- - [ ] Deck Data supports permutations of cards.
  - [ ] The backend creates a deck from a JSON file specifying the deck.
  - [ ] A player can draw a card from a deck tracked on the backend.
  - [ ] A player can start a new game, resulting in a new set of decks.

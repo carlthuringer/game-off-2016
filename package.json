@@ -4,10 +4,11 @@
   "description": "An Electron implementation of my Trading game",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
+    "start": "electron ./dist/main",
     "test": "mocha --opts mocha.opts && rm -rf test",
     "test:auto": "mocha --opts mocha.opts --watch",
-    "build": "webpack --"
+    "build": "webpack --",
+    "dev": "node devServer.js"
   },
   "repository": "https://github.com/carlthuringer/game-off-2016",
   "keywords": [
@@ -21,12 +22,14 @@
     "awesome-typescript-loader": "^2.2.4",
     "chai": "^3.5.0",
     "electron": "^1.4.1",
+    "elm-webpack-loader": "^3.0.6",
+    "express": "^4.14.0",
     "mocha": "^3.1.2",
     "ts-node": "^1.6.1",
     "typescript": "^2.0.6",
-    "webpack": "^1.13.3"
+    "webpack": "^1.13.3",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.13.1"
   },
-  "dependencies": {
-    "webpack": "2.1.0-beta.25"
-  }
+  "dependencies": {}
 }

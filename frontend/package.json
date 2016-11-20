@@ -1,0 +1,33 @@
+{
+  "name": "party-trade",
+  "version": "0.0.1",
+  "description": "An Electron implementation of my Trading game",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ./dist/main",
+    "build": "rimraf dist && webpack --",
+    "dev": "node devServer.js"
+  },
+  "repository": "https://github.com/carlthuringer/game-off-2016",
+  "keywords": [
+    "gamedev",
+    "electron",
+    "elm"
+  ],
+  "author": "Carl Thuringer",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.0.1",
+    "electron": "^1.4.1",
+    "elm-hot-loader": "^0.4.2",
+    "elm-webpack-loader": "^3.0.6",
+    "express": "^4.14.0",
+    "mocha": "^3.1.2",
+    "rimraf": "^2.5.4",
+    "webpack": "^1.13.3",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.13.1",
+    "webpack-target-electron-renderer": "^0.4.0"
+  },
+  "dependencies": {}
+}

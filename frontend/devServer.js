@@ -10,7 +10,6 @@ const compiler = webpack(config)
 const PORT = process.env.PORT || 9000
 
 const wdm = webpackDevMiddleware(compiler, {
-  path: config.output.path,
   publicPath: config.output.publicPath,
   stats: {
     colors: true
@@ -20,6 +19,12 @@ const wdm = webpackDevMiddleware(compiler, {
 process.env.ENV = 'development'
 
 app.use(wdm)
+/*app.use(webpackHotMiddleware(compiler, {
+  log: console.log,
+  path: '/__webpack_hmr',
+  heartbeat: 3 * 1000
+}))
+*/
 app.use(webpackHotMiddleware(compiler))
 
 const server = app.listen(PORT, 'localhost', function (serverError) {
